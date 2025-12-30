@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Students</string>
+    <string name="app_title">Student Management</string>
+    <string name="students">👥 Students</string>
+    <string name="report">📊 Report</string>
+    <string name="attendance">📅 Attendance</string>
+    <string name="history">📜 History</string>
+    <string name="subjects">📚 Subjects</string>
+    <string name="android_lab">🤖 Android Development Lab</string>
+    <string name="android_lab_desc">Practical session for mobile app development</string>
+    <string name="android_lab_time">🕒 Mon &amp; Wed: 10AM-12PM</string>
+    <string name="mark_now">Mark Now</string>
+    <string name="android_theory">📘 Android Development Theory</string>
+    <string name="android_theory_desc">Theoretical concepts of Android development</string>
+    <string name="android_theory_time">🕒 Tue &amp; Thu: 9AM-10AM</string>
+    <string name="web_lab">🌐 Web Technology Lab</string>
+    <string name="web_lab_desc">Hands-on web development practice</string>
+    <string name="web_lab_time">🕒 Mon &amp; Wed: 2PM-4PM</string>
+    <string name="web_theory">📗 Web Technology Theory</string>
+    <string name="web_theory_desc">Theoretical foundations of web technologies</string>
+    <string name="web_theory_time">🕒 Tue &amp; Thu: 11AM-12PM</string>
+    <string name="ca_lab">💻 Computer Architecture Lab</string>
+    <string name="ca_lab_desc">Hardware and system architecture practical</string>
+    <string name="ca_lab_time">🕒 Fri: 10AM-1PM</string>
+    <string name="ca_theory">📕 Computer Architecture Theory</string>
+    <string name="ca_theory_desc">Theoretical study of computer systems</string>
+    <string name="ca_theory_time">🕒 Wed: 9AM-11AM</string>
+    <string name="hci_lab">🎨 HCI Lab</string>
+    <string name="hci_lab_desc">Human-Computer Interaction practical</string>
+    <string name="hci_lab_time">🕒 Thu: 2PM-5PM</string>
+    <string name="hci_theory">📓 HCI Theory</string>
+    <string name="hci_theory_desc">Theoretical aspects of user interface design</string>
+    <string name="hci_theory_time">🕒 Mon: 11AM-1PM</string>
+    <string name="management">📊 Intro to Management</string>
+    <string name="management_desc">Fundamental principles of management</string>
+    <string name="management_time">🕒 Fri: 9AM-11AM</string>
+</resources>

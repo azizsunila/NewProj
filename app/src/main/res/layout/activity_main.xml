@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/appBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@color/purple_500"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Top Navigation Bar -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/appBanner"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/purple_500">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="8dp">
+
+            <!-- Students Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStudents"
+                style="@style/NavButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="@string/students"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_students"
+                app:iconTint="#FFFFFF" />
+
+            <!-- View Report Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReport"
+                style="@style/NavButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="@string/report"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_report"
+                app:iconTint="#FFFFFF" />
+
+            <!-- Attendance Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAttendance"
+                style="@style/NavButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="@string/attendance"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_attendance"
+                app:iconTint="#FFFFFF" />
+
+            <!-- History Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHistory"
+                style="@style/NavButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="@string/history"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_history"
+                app:iconTint="#FFFFFF" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Scrollable Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navBar"
+        android:layout_marginTop="8dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subjects"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#2D3748"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Android Development Lab Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#E3F2FD">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/android_lab"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1E40AF"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/android_lab_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/android_lab_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowAndroidLab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#3B82F6"
+                            android:paddingHorizontal="20dp"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Android Development Theory Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#EDE9F6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/android_theory"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#5B21B6"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/android_theory_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/android_theory_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowAndroidTheory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#8B5CF6"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Web Technology Lab Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FEF3C7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/web_lab"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#92400E"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/web_lab_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/web_lab_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowWebLab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#F59E0B"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Web Technology Theory Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#D1FAE5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/web_theory"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#065F46"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/web_theory_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/web_theory_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowWebTheory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#10B981"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Computer Architecture Lab Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FCE7F3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ca_lab"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#831843"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ca_lab_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ca_lab_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowCALab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#EC4899"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Computer Architecture Theory Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FEF3C7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ca_theory"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#92400E"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ca_theory_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ca_theory_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowCATheory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#F59E0B"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- HCI Lab Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#DBEAFE">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hci_lab"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1E40AF"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hci_lab_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hci_lab_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowHCILab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#3B82F6"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- HCI Theory Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#F3E8FF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hci_theory"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#6D28D9"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hci_theory_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hci_theory_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowHCITheory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#8B5CF6"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Intro to Management Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#FFE4E6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#BE123C"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/management_desc"
+                        android:textSize="14sp"
+                        android:textColor="#4B5563"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/management_time"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMarkNowManagement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mark_now"
+                            android:textColor="#FFFFFF"
+                            app:cornerRadius="20dp"
+                            app:icon="@drawable/ic_mark"
+                            app:iconTint="#FFFFFF"
+                            android:backgroundTint="#F43F5E"
+                            android:paddingHorizontal="20dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
