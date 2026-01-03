@@ -35,4 +35,16 @@
     <string name="management">📊 Intro to Management</string>
     <string name="management_desc">Fundamental principles of management</string>
     <string name="management_time">🕒 Fri: 9AM-11AM</string>
+    <string name="school_icon">School Icon</string>
+    <string name="student">STUDENT</string>
+    <string name="academic_excellence_portal">Academic Excellence Portal</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="sign_in_to_access_your_dashboard">Sign in to access your dashboard</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="new_to_platform">New to platform?</string>
+    <string name="create_new_account">CREATE NEW ACCOUNT</string>
+    <string name="footer_text">© 2024 Student Management System</string>
 </resources>

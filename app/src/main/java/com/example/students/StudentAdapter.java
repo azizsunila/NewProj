@@ -8,30 +8,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
 
-    private List<Student> studentList;
+    private ArrayList<Student> studentList;
 
-    public StudentAdapter(List<Student> studentList) {
+    public StudentAdapter(ArrayList<Student> studentList) {
         this.studentList = studentList;
     }
 
     @NonNull
     @Override
     public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.student_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_2, parent, false);
         return new StudentViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
         Student student = studentList.get(position);
-        holder.tvStudentName.setText(student.getName());
-        holder.tvRollNumber.setText("Roll No: " + student.getRollNo());
-        holder.tvClass.setText(student.getClassName());
-        // You can add logic for avatar and status here later
+        holder.text1.setText(student.getName());
+        holder.text2.setText(student.getRollNo() + ", " + student.getClassName());
     }
 
     @Override
@@ -40,14 +38,12 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
     }
 
     public static class StudentViewHolder extends RecyclerView.ViewHolder {
-        TextView tvStudentName, tvRollNumber, tvClass, tvAvatar;
+        TextView text1, text2;
 
         public StudentViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvStudentName = itemView.findViewById(R.id.tvStudentName);
-            tvRollNumber = itemView.findViewById(R.id.tvRollNumber);
-            tvClass = itemView.findViewById(R.id.tvClass);
-            tvAvatar = itemView.findViewById(R.id.tvAvatar);
+            text1 = itemView.findViewById(android.R.id.text1);
+            text2 = itemView.findViewById(android.R.id.text2);
         }
     }
 }
