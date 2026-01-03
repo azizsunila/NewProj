@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Button btnStudents = findViewById(R.id.btnStudents);
         Button btnReport = findViewById(R.id.btnReport);
         Button btnAttendance = findViewById(R.id.btnAttendance);
         Button btnHistory = findViewById(R.id.btnHistory);
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnMarkNowHCITheory = findViewById(R.id.btnMarkNowHCITheory);
         Button btnMarkNowManagement = findViewById(R.id.btnMarkNowManagement);
 
+        btnStudents.setOnClickListener(this);
         btnReport.setOnClickListener(this);
         btnAttendance.setOnClickListener(this);
         btnHistory.setOnClickListener(this);
@@ -56,7 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         Intent intent = null;
         int id = v.getId();
-        if (id == R.id.btnAttendance || id == R.id.btnMarkNowAndroidLab || id == R.id.btnMarkNowAndroidTheory || id == R.id.btnMarkNowWebLab || id == R.id.btnMarkNowWebTheory || id == R.id.btnMarkNowCALab || id == R.id.btnMarkNowCATheory || id == R.id.btnMarkNowHCILab || id == R.id.btnMarkNowHCITheory || id == R.id.btnMarkNowManagement) {
+        if (id == R.id.btnStudents) {
+            intent = new Intent(this, StudentsActivity.class);
+        } else if (id == R.id.btnAttendance || id == R.id.btnMarkNowAndroidLab || id == R.id.btnMarkNowAndroidTheory || id == R.id.btnMarkNowWebLab || id == R.id.btnMarkNowWebTheory || id == R.id.btnMarkNowCALab || id == R.id.btnMarkNowCATheory || id == R.id.btnMarkNowHCILab || id == R.id.btnMarkNowHCITheory || id == R.id.btnMarkNowManagement) {
             intent = new Intent(this, AttendanceActivity.class);
         } else if (id == R.id.btnHistory) {
             intent = new Intent(this, HistoryActivity.class);

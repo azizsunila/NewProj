@@ -1,11 +1,12 @@
 package com.example.students;
 
+import com.example.students.HistoryItem;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataManager {
     private static DataManager instance;
-    private List<HistoryItem> historyList = new ArrayList<>();
+    private final List<HistoryItem> historyList = new ArrayList<>();
 
     private DataManager() {
         // private constructor
