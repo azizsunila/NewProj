@@ -27,6 +27,9 @@ public class StudentsActivity extends AppCompatActivity {
 
         RecyclerView rvStudents = findViewById(R.id.rvStudents);
         rvStudents.setLayoutManager(new LinearLayoutManager(this));
+
+        addDummyStudents(); // Add this line
+
         studentAdapter = new StudentAdapter(studentList);
         rvStudents.setAdapter(studentAdapter);
 
@@ -37,6 +40,14 @@ public class StudentsActivity extends AppCompatActivity {
                 showAddStudentDialog();
             }
         });
+    }
+
+    private void addDummyStudents() {
+        studentList.add(new Student("Ayesha", "01", "BSCS 5B"));
+        studentList.add(new Student("Fatima", "02", "BSCS 5B"));
+        studentList.add(new Student("Ali", "03", "BSCS 5B"));
+        studentList.add(new Student("Zafar", "04", "BSCS 5B"));
+        studentList.add(new Student("Sakeena", "05", "BSCS 5B"));
     }
 
     private void showAddStudentDialog() {

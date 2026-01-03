@@ -231,7 +231,8 @@
         android:layout_above="@id/fabAddStudent"
         android:padding="8dp"
         android:clipToPadding="false"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:background="#F8FAFC" />
 
     <!-- Empty State View -->
     <LinearLayout
