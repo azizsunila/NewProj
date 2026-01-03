@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Button btnReport = findViewById(R.id.btnReport);
         Button btnAttendance = findViewById(R.id.btnAttendance);
         Button btnHistory = findViewById(R.id.btnHistory);
         Button btnMarkNowAndroidLab = findViewById(R.id.btnMarkNowAndroidLab);
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnMarkNowHCITheory = findViewById(R.id.btnMarkNowHCITheory);
         Button btnMarkNowManagement = findViewById(R.id.btnMarkNowManagement);
 
+        btnReport.setOnClickListener(this);
         btnAttendance.setOnClickListener(this);
         btnHistory.setOnClickListener(this);
         btnMarkNowAndroidLab.setOnClickListener(this);
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent = new Intent(this, AttendanceActivity.class);
         } else if (id == R.id.btnHistory) {
             intent = new Intent(this, HistoryActivity.class);
+        } else if (id == R.id.btnReport) {
+            intent = new Intent(this, ReportActivity.class);
         }
 
         if (intent != null) {

@@ -4,13 +4,13 @@ public class HistoryItem {
     private String status;
     private String studentName;
     private String subject;
-    private String timestamp;
+    private String time;
 
-    public HistoryItem(String status, String studentName, String subject, String timestamp) {
+    public HistoryItem(String status, String studentName, String subject, String time) {
         this.status = status;
         this.studentName = studentName;
         this.subject = subject;
-        this.timestamp = timestamp;
+        this.time = time;
     }
 
     public String getStatus() {
@@ -25,7 +25,7 @@ public class HistoryItem {
         return subject;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public String getTime() {
+        return time;
     }
 }
